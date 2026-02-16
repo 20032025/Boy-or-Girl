@@ -17,6 +17,16 @@ body {
     color:#333;
 }
 
+.title .boy {
+    color:#4da6ff; /* أزرق */
+    font-weight:bold;
+}
+
+.title .girl {
+    color:#ff6ec7; /* وردي */
+    font-weight:bold;
+}
+
 /* حاوية الدوائر */
 .circle-container {
     display:grid;
