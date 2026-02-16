@@ -143,3 +143,14 @@ background-repeat:no-repeat;
 background-position:center;
 
 }
+
+.baby-prayer {
+    font-size:16px;       /* حجم الخط */
+    line-height:1.4;      /* تباعد الأسطر */
+    color:#ff6ec7;        /* اللون الافتراضي للفتاة، غيّري إلى #4da6ff للبنين */
+    max-width:600px;      /* أقصى عرض للنص */
+    margin:20px auto;     /* محاذاة للنص في الوسط */
+    text-align:center;    /* توسيط النص */
+    direction:rtl;        /* من اليمين لليسار */
+    font-family:Arial, sans-serif; /* خط نظيف للويب */
+}
