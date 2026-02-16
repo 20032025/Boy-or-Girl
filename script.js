@@ -39,8 +39,8 @@ if(circle.classList.contains("done")) return;
 circle.classList.add("done");
 
 /* show baby feet */
-circle.innerHTML = "👣";
-/* last circle = real gender */
+circle.innerHTML = '<div class="feet"></div>';
+  /* last circle = real gender */
 if(index === 8){
 
 if(realGender === "boy"){
