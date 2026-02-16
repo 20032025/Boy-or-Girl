@@ -39,8 +39,7 @@ if(circle.classList.contains("done")) return;
 circle.classList.add("done");
 
 /* show baby feet */
-circle.innerHTML = "";
-
+circle.innerHTML = "👣";
 /* last circle = real gender */
 if(index === 8){
 
