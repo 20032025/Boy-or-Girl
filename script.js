@@ -1,81 +1,30 @@
-/* SET REAL GENDER HERE */
-let realGender = "girl"; // change to "boy" or "girl"
+// جنس الجنين لتحديد اللون عند آخر دائرة
+let realGender = "girl"; // "boy" أو "girl"
 
-/*
-ORDER YOU REQUESTED:
-
-1 = girl
-2 = girl
-3 = boy
-4 = boy
-5 = boy
-6 = girl
-7 = boy
-8 = girl
-9 = real gender
-
-*/
-
+// جميع الدوائر
 let circles = document.querySelectorAll(".scratch");
 
-/* fixed pattern for first 8 circles */
-let pattern = [
-"girl", // 1
-"girl", // 2
-"boy",  // 3
-"boy",  // 4
-"boy",  // 5
-"girl", // 6
-"boy",  // 7
-"girl"  // 8
-];
+// ترتيب الألوان لبقية الدوائر (8 دوائر أولى)
+let pattern = ["girl","girl","boy","boy","boy","girl","boy","girl"];
 
-circles.forEach(function(circle, index){
+circles.forEach((circle, index) => {
+    circle.addEventListener("click", () => {
+        if(circle.classList.contains("done")) return; // منع الضغط مرة ثانية
+        circle.classList.add("done");
 
-circle.addEventListener("click", function(){
+        // نعرض صورة البصمة بدل النص
+        circle.innerHTML = '<img src="feet.png" style="width:40px;height:40px;">';
 
-if(circle.classList.contains("done")) return;
+        if(index === 8){ // آخر دائرة
+            // اللون حسب جنس الجنين
+            circle.style.backgroundColor = realGender==="boy"?"#4da6ff":"#ff6ec7";
 
-circle.classList.add("done");
-
-/* show baby feet */
-circle.innerHTML = '<img src="feet.png" style="width:50px;height:50px;">';
-  /* last circle = real gender */
-if(index === 8){
-
-if(realGender === "boy"){
-
-circle.classList.add("reveal-boy");
-
-}else{
-
-circle.classList.add("reveal-girl");
-
-}
-
-/* go to result page */
-setTimeout(function(){
-
-window.location.href = "result.html";
-
-},800);
-
-}
-else{
-
-/* use pattern */
-if(pattern[index] === "boy"){
-
-circle.classList.add("reveal-boy");
-
-}else{
-
-circle.classList.add("reveal-girl");
-
-}
-
-}
-
-});
-
+            // تشغيل الموسيقى
+            let music = new Audio("music.mp3");
+            music.play();
+        } else {
+            // باقي الدوائر حسب pattern
+            circle.style.backgroundColor = pattern[index]==="boy"?"#4da6ff":"#ff6ec7";
+        }
+    });
 });
