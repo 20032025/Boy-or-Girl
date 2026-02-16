@@ -39,7 +39,7 @@ if(circle.classList.contains("done")) return;
 circle.classList.add("done");
 
 /* show baby feet */
-circle.innerHTML = '<div class="feet"></div>';
+circle.innerHTML = '<img src="feet.png" style="width:50px;height:50px;">';
   /* last circle = real gender */
 if(index === 8){
 
