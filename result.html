@@ -2,11 +2,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Baby Reveal</title><link rel="stylesheet" href="style.css"></head>
-<body class="girl"> <!-- change to boy or girl --><div class="result-container"><div class="welcome">
+<body class="girl"><div class="result-container"><div class="welcome">
 Welcome Baby
 </div><div class="baby-name">
 Lina
-</div></div><!-- AUDIO --><audio id="music" autoplay>
-<source src="music.mp3" type="music.mp3">
-</audio></body>
+</div></div><audio id="music">
+<source src="music.mp3" type="audio/mpeg">
+</audio><script>
+
+let music = document.getElementById("music");
+
+/* play automatically */
+window.onload = function(){
+
+music.play().catch(function(){
+
+/* if blocked, play on click */
+document.body.addEventListener("click", function(){
+
+music.play();
+
+});
+
+});
+
+};
+
+</script></body>
 </html>
