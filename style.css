@@ -55,3 +55,12 @@ body {
 .scratch.last {
     border:2px dashed #999;
 }
+
+
+.circle-container {
+    transform:scale(1);
+}
+
+.scratch {
+    flex-shrink:0;
+} 
