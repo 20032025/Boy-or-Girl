@@ -13,7 +13,7 @@ circles.forEach((circle, index) => {
         circle.classList.add("done");
 
         // نعرض صورة البصمة بدل النص
-        circle.innerHTML = '<img src="feet.png" style="width:40px;height:40px;">';
+        circle.innerHTML = '<img src="feet.png" style="width:70px;height:70px;">';
 
         if(index === 8){ // آخر دائرة
             // اللون حسب جنس الجنين
