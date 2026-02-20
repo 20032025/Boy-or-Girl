@@ -30,8 +30,8 @@ body {
 /* حاوية الدوائر */
 .circle-container {
     display:grid;
-    grid-template-columns:repeat(3, 120px); /* أكبر */
-    gap:25px; /* مسافة أجمل */
+    grid-template-columns:repeat(3, 22vw); /* أكبر */
+    gap:4vw; /* مسافة أجمل */
     justify-content:center;
 } 
 
@@ -39,16 +39,19 @@ body {
 
 /* كل دائرة */
 .scratch {
-    width:120px;
-    height:120px;
+    width:22vw;
+    height:22vw;
+    max-width:120px;   /* يمنعها من أن تصبح ضخمة على الحاسوب */
+    max-height:120px;
+    min-width:70px;    /* يمنعها من أن تصبح صغيرة جدًا على الهاتف */
+    min-height:70px;
     border-radius:50%;
     background-color:#ccc;
     display:flex;
     justify-content:center;
     align-items:center;
     cursor:pointer;
-} 
-
+}
 
 
 /* آخر دائرة مميزة */
